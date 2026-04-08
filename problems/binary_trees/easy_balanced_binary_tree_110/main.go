@@ -1,4 +1,4 @@
-package binarytrees
+package easybalancedbinarytree110
 
 /**
 Given a binary tree, determine if it is height-balanced.
@@ -17,5 +17,10 @@ type TreeNode struct {
 
 // Implementation of the problem
 func IsBalanced(root *TreeNode) bool {
+
+}
+
+// Helper for the implementation of the problem
+func getHeight(node *TreeNode) int {
 
 }
