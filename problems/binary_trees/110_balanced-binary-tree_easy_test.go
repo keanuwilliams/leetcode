@@ -1,4 +1,4 @@
-package easybalancedbinarytree110
+package binarytrees
 
 import (
 	"testing"
@@ -6,15 +6,15 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-type test struct {
+type isBalancedTest struct {
 	name     string
 	input    *TreeNode
 	expected bool
 }
 
 // Helper to get the tests for this problem
-func getTests() []test {
-	return []test{
+func getIsBalancedTests() []isBalancedTest {
+	return []isBalancedTest{
 		{
 			name: "Binary Tree [3,9,20,null,null,15,7] should return true",
 			input: &TreeNode{
@@ -56,7 +56,7 @@ func getTests() []test {
 }
 
 func TestIsBalanced(t *testing.T) {
-	for _, tt := range getTests() {
+	for _, tt := range getIsBalancedTests() {
 		t.Run(tt.name, func(t *testing.T) {
 			got := IsBalanced(tt.input)
 			require.Equal(t, tt.expected, got)
