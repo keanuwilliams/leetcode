@@ -10,13 +10,6 @@ Constraints:
 - -10^4 <= Node.val <= 10^4
 */
 
-// Definition for a binary tree node
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
-
 // Implementation of the problem
 func IsBalanced(root *TreeNode) bool {
 	if root == nil {
