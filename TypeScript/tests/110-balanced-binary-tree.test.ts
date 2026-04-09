@@ -1,7 +1,7 @@
 import { isBalanced, TreeNode } from "../problems/110-balanced-binary-tree";
 import { Test } from "./common";
 
-export interface IsBalancedTest extends Test {
+interface IsBalancedTest extends Test {
     input: TreeNode | null
     expected: boolean
 }

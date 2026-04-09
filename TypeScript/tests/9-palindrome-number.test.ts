@@ -1,7 +1,7 @@
 import { isPalindrome } from "../problems/9-palindrome-number";
 import { Test } from "./common";
 
-export interface IsPalindromeTest extends Test {
+interface IsPalindromeTest extends Test {
     input: number
     expected: boolean
 }

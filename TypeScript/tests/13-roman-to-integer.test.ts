@@ -1,7 +1,7 @@
 import { romanToInt } from "../problems/13-roman-to-integer";
 import { Test } from "./common";
 
-export interface RomanToIntTest extends Test {
+interface RomanToIntTest extends Test {
     input: string
     expected: number
 }

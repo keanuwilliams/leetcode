@@ -1,7 +1,7 @@
 import { twoSum } from "../problems/1-two-sum";
 import { Test } from "./common";
 
-export interface TwoSumTest extends Test {
+interface TwoSumTest extends Test {
     nums: number[]
     target: number
     expected: number[]
