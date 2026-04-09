@@ -1,4 +1,4 @@
-package binarytrees
+package problems
 
 import (
 	"testing"
