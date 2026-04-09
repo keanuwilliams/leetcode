@@ -1,0 +1,1 @@
+export interface Test { name: string, expected: any }
