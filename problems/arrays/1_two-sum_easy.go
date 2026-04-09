@@ -18,31 +18,17 @@ Constraints:
 
 // Implementation of the problem
 func TwoSum(nums []int, target int) []int {
-	hashMap := make(map[int][]int)
+	hashMap := make(map[int]int)
 
-	// Add values into the hashmap
-	for ind, num := range nums {
-		_, isFound := hashMap[num]
-		if !isFound {
-			hashMap[num] = make([]int, 0)
-		}
-		hashMap[num] = append(hashMap[num], ind)
-	}
-
-	// Search for index by wanted value
-	for currInd, num := range nums {
+	for i, num := range nums {
 		want := target - num
-		foundInds, isFound := hashMap[want]
-		if isFound {
-			for _, foundInd := range foundInds {
-				if currInd == foundInd {
-					continue
-				}
-				return []int{currInd, foundInd}
-			}
+
+		if j, found := hashMap[want]; found {
+			return []int{j, i}
 		}
+
+		hashMap[num] = i
 	}
 
-	// Due to contraints, this will never be returned
-	return []int{}
+	return []int{} // won't hit due to constraints
 }
