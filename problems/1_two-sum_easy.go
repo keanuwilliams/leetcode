@@ -16,7 +16,7 @@ Constraints:
 - only one valid answer exists
 */
 
-// Implementation of the problem
+// Implementation goes here
 func TwoSum(nums []int, target int) []int {
 	hashMap := make(map[int]int)
 

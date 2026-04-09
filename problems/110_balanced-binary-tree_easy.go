@@ -10,7 +10,7 @@ Constraints:
 - -10^4 <= Node.val <= 10^4
 */
 
-// Implementation of the problem
+// Implementation goes here
 func IsBalanced(root *TreeNode) bool {
 	if root == nil {
 		return true
