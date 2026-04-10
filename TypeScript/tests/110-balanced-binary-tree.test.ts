@@ -11,12 +11,8 @@ const isBalancedTests: IsBalancedTest[] = [
         name: "Binary Tree [3,9,20,null,null,15,7] should return true",
         input: {
             val: 3,
-            left: { val: 9, left: null, right: null },
-            right: {
-                val: 20 ,
-                left: { val: 15, left: null, right: null },
-                right: { val: 7, left: null, right: null },
-            },
+            left: new TreeNode(9, null, null),
+            right: new TreeNode(20, new TreeNode(15, null, null), new TreeNode(7, null, null)),
         },
         expected: true,
     },
@@ -24,16 +20,8 @@ const isBalancedTests: IsBalancedTest[] = [
         name: "Binary Tree [1,2,2,3,3,null,null,4,4] should return false",
         input: {
             val: 1,
-            left: {
-                val: 2,
-                left: {
-                    val: 3,
-                    left: { val: 4, left: null, right: null },
-                    right: { val: 4, left: null, right: null },
-                },
-                right: { val: 2, left: null, right: null },
-            },
-            right: { val: 2, left: null, right: null },
+            left: new TreeNode(2, new TreeNode(3, new TreeNode(4, null, null), new TreeNode(4, null, null)), new TreeNode(2, null, null)),
+            right: new TreeNode(2, null, null),
         },
         expected: false,
     },

@@ -28,5 +28,24 @@ export class ListNode {
  * @returns the sum as a linked list
  */
 export function addTwoNumbers(l1: ListNode | null, l2: ListNode | null): ListNode | null {
-    return null;
+    const dummyHead: ListNode | null = new ListNode(0);
+    let curr: ListNode | null = dummyHead;
+
+    let carry: number = 0;
+
+    while(l1 !== null || l2 !== null || carry !== 0) {
+        const v1 = l1 ? l1.val : 0; // default to zero if val doesn't exist
+        const v2 = l2 ? l2.val : 0; // default to zero if val doesn't exist
+
+        const sum = v1 + v2 + carry;
+        carry = Math.floor(sum / 10);
+
+        curr.next = new ListNode(sum % 10);
+        curr = curr?.next;
+
+        if (l1) l1 = l1.next;
+        if (l2) l2 = l2.next;
+    }
+
+    return dummyHead.next;
 };
