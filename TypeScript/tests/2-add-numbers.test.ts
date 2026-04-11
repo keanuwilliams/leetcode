@@ -1,4 +1,5 @@
-import { addTwoNumbers, ListNode } from "../problems/2-add-numbers";
+import { addTwoNumbers } from "../problems/2-add-numbers";
+import { ListNode } from "../problems/common";
 import { Test } from "./common";
 
 interface AddTwoNumbersTest extends Test {

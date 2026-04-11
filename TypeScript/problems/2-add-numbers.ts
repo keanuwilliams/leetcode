@@ -10,15 +10,7 @@
  * - It is guaranteed that the list represents a number that does not have leading zeros.
  */
 
-// Definition for singly-linked list.
-export class ListNode {
-    val: number
-    next: ListNode | null
-    constructor(val?: number, next?: ListNode | null) {
-        this.val = (val===undefined ? 0 : val)
-        this.next = (next===undefined ? null : next)
-    }
-}
+import { ListNode } from "./common";
 
 /**
  * You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order,
