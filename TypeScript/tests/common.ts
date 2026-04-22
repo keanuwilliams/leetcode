@@ -1,1 +1,1 @@
-export interface Test { name: string, expected: any }
+// This file is now empty as we switched to using Jest's test.each for parameterized tests
